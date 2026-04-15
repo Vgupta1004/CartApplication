@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
         user.setLastName(request.getLastName());
         user.setEmail(request.getEmail());
         user.setPhone(request.getPhone());
-        user.setRole(request.getRole());
+        user.setUserType(request.getUserType());
 
         User savedUser = userRepository.save(user);
         return mapToResponse(savedUser);
@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
         user.setLastName(request.getLastName());
         user.setEmail(request.getEmail());
         user.setPhone(request.getPhone());
-        user.setRole(request.getRole());
+        user.setUserType(request.getUserType());
 
         return mapToResponse(userRepository.save(user));
     }
@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
                 user.getLastName(),
                 user.getEmail(),
                 user.getPhone(),
-                user.getRole()
+                user.getUserType()
         );
     }
 }

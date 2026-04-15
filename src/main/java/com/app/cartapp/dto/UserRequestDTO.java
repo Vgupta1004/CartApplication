@@ -1,7 +1,10 @@
 package com.app.cartapp.dto;
 
+import com.app.cartapp.model.UserType;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,6 +24,8 @@ public class UserRequestDTO {
 
     private String phone;
 
+    @NotNull
     @NotBlank
-    private String role;
+    private UserType userType;
+
 }
