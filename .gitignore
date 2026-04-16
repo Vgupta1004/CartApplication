@@ -49,3 +49,5 @@ Thumbs.db
 application-dev.properties
 application-prod.properties
 ``
+
+.metadata/

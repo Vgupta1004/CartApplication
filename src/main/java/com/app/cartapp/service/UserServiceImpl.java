@@ -10,10 +10,12 @@ import com.app.cartapp.exception.ResourceNotFoundException;
 import com.app.cartapp.model.User;
 import com.app.cartapp.repository.UserRepository;
 
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
+@Data
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
