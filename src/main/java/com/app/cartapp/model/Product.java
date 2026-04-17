@@ -57,6 +57,4 @@ public class Product {
 	public void setSku(String sku) {
 		this.sku = sku;
 	}
-	
-	
 }
