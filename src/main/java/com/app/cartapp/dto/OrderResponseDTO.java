@@ -4,6 +4,9 @@ import java.util.List;
 
 import com.app.cartapp.model.OrderStatus;
 
+import lombok.Data;
+
+@Data
 public class OrderResponseDTO {
 	private Long orderId;
 	private Long userId;

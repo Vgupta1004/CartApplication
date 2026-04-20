@@ -6,7 +6,9 @@ import com.app.cartapp.model.OrderStatus;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
+import lombok.Data;
 
+@Data
 public class OrderRequestDTO {
 	@NotNull(message = "user id cannot be null")
 	private Long userId;

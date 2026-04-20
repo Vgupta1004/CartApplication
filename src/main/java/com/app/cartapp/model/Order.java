@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -30,7 +31,7 @@ public class Order {
 	
 	@ManyToOne
 	@JoinColumn(name="user_id")
-	private User userId;
+	private User user;
 	
 	private Double totalAmount;
 	
@@ -38,6 +39,11 @@ public class Order {
 	private OrderStatus orderStatus;
 	
 	 @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
-	 private List<OrderItem> items = new ArrayList()<>;
+	private List<OrderItem> items = new ArrayList<>();
+	
+	public void addItem(OrderItem item) {
+		items.add(item);
+		item.setOrder(this);
+	}
 
 }
