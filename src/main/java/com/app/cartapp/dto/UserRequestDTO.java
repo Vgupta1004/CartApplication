@@ -25,7 +25,6 @@ public class UserRequestDTO {
     private String phone;
 
     @NotNull
-    @NotBlank
     private UserType userType;
 
 }
