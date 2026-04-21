@@ -10,6 +10,8 @@ import com.app.cartapp.dto.OrderRequestDTO;
 import com.app.cartapp.dto.OrderResponseDTO;
 import com.app.cartapp.service.OrderService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api")
 public class OrderController {
@@ -19,7 +21,7 @@ public class OrderController {
 
     // POST /api/checkout
     @PostMapping("/checkout")
-    public ResponseEntity<OrderResponseDTO> placeOrder(@RequestBody OrderRequestDTO request) {
+    public ResponseEntity<OrderResponseDTO> placeOrder(@Valid @RequestBody OrderRequestDTO request) {
         OrderResponseDTO response = orderService.placeOrder(request);
         return ResponseEntity.ok(response);
     }
